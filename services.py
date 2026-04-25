@@ -15,6 +15,26 @@ success_store: List[Dict[str, Any]] = []
 dlq_store: List[Dict[str, Any]] = []
 retry_queue_store: List[Dict[str, Any]] = []
 
+def evaluate_correlation_timeouts(threshold_minutes: int = 60):
+    db = SessionLocal()
+    try:
+        from datetime import datetime, timezone, timedelta
+        cutoff = datetime.now(timezone.utc) - timedelta(minutes=threshold_minutes)
+        groups = db.query(CorrelationGroup).filter(
+            CorrelationGroup.status == "IN_PROGRESS",
+            CorrelationGroup.created_at < cutoff
+        ).all()
+        
+        timed_out = 0
+        for g in groups:
+            g.status = "FAILED"
+            # Could also log an exception event here for the orphaned sub/main assemblies
+            timed_out += 1
+        db.commit()
+        return timed_out
+    finally:
+        db.close()
+
 def handle_correlation(mes_data_dict, rules_config):
     # Returns (is_complete, status, payload_for_flags_if_complete)
     assembly_level = mes_data_dict.get("entityType") or "MAIN_ASSEMBLY"
