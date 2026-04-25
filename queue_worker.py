@@ -56,15 +56,49 @@ def process_message(ch, method, properties, body):
             
             logger.info(f"Event {event_id} successfully sent to FLAGS")
             ch.basic_ack(delivery_tag=method.delivery_tag)
-            # Update DB to SUCCESS via some DB method
+            
+            from database import SessionLocal, QualityEvent
+            db = SessionLocal()
+            try:
+                event = db.query(QualityEvent).filter(QualityEvent.event_id == event_id).first()
+                if event:
+                    event.transmission_status = "SENT"
+                    db.commit()
+            except Exception as dbe:
+                logger.error(f"DB Update failed on success: {dbe}")
+            finally:
+                db.close()
             return
             
         except Exception as e:
+            from database import SessionLocal, QualityEvent, ProcessingAttempt
+            db = SessionLocal()
+            try:
+                event = db.query(QualityEvent).filter(QualityEvent.event_id == event_id).first()
+                if event:
+                    if attempts + 1 >= max_attempts:
+                        event.transmission_status = "RETRY_EXHAUSTED"
+                    elif event.transmission_status != "FAILED":
+                        event.transmission_status = "FAILED"
+                    
+                attempt_tracking = ProcessingAttempt(
+                    event_id=event_id,
+                    result_status="FAILED" if attempts + 1 < max_attempts else "RETRY_EXHAUSTED",
+                    error_message=str(e),
+                    attempt_number=attempts + 1,
+                    attempt_type="QUEUE_CONSUMER_RETRY"
+                )
+                db.add(attempt_tracking)
+                db.commit()
+            except Exception as dbe:
+                logger.error(f"DB Update failed: {dbe}")
+            finally:
+                db.close()
+                
             attempts += 1
             if attempts >= max_attempts:
-                logger.error(f"Event {event_id} failed after {max_attempts} attempts. Pushing to DLQ or dead-letter")
-                # Need to update DB tracking manually here
-                ch.basic_ack(delivery_tag=method.delivery_tag) # we consumed it but it failed permanently
+                logger.error(f"Event {event_id} failed after {max_attempts} attempts. Pushing to DLQ")
+                ch.basic_ack(delivery_tag=method.delivery_tag)
                 return
             
             # Backoff
