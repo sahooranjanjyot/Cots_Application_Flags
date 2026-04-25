@@ -200,7 +200,8 @@ class MESQualityResult(BaseModel):
             forbidden_fields = json.loads(rule.forbidden_fields_json)
             
             for field in mandatory_fields:
-                if getattr(self, field, None) is None:
+                val = getattr(self, field, None)
+                if val is None or (isinstance(val, str) and str(val).strip() == ""):
                     # Provide strict message mapped to legacy responses for tests handling compatibility
                     if result_type == "FAIL":
                         raise ValueError(f"Missing mandatory field for FAIL: {field}")
