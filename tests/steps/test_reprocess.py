@@ -21,11 +21,12 @@ def test_manual_reprocess():
         "eventId": event_id,
         "sourceSystem": "MES-LINE-2",
         "entityType": "SUB_ASSEMBLY",
-        "step": "DC_TOOL",
+        "step": "DC_TOOL_STEP",
         "result": "PASS",
         "productId": "PA-101",
         "serialNumber": "SUB-REPRO-1",
-        "timestamp": "2026-04-25T11:00:00Z",
+        "parentSerialNumber": "ASSY-123",
+        "eventTimestamp": "2026-04-25T11:00:00Z",
         "stationId": "ST01"
     })
     assert res1.status_code == 200

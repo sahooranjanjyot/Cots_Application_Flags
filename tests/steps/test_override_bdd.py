@@ -15,12 +15,14 @@ def override_payload_init():
     return {
        "eventType": "QUALITY_RESULT",
        "eventId": f"EVT-{uuid.uuid4().hex[:8]}",
-       "step": "ROUTE",
+       "sourceSystem": "TEST",
+       "entityType": "MAIN_ASSEMBLY",
+       "step": "ROUTE_STEP",
        "originalResult": "FAIL",
        "overrideResult": "PASS",
        "productId": f"P-{uuid.uuid4().hex[:5]}",
        "serialNumber": f"SN-{uuid.uuid4().hex[:5]}",
-       "timestamp": "2026-04-25T12:00:00Z",
+       "eventTimestamp": "2026-04-25T12:00:00Z",
        "overrideBy": "AUTH-USER",
        "overrideTimestamp": "2026-04-25T12:05:00Z",
        "overrideReasonCode": "OVR-01"

@@ -2,15 +2,16 @@ from fastapi import FastAPI, BackgroundTasks, Request, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from models import MESQualityResult
-from database import SessionLocal, QualityEvent, CorrelationEvent, EventStore, OverrideEvent
+from database import SessionLocal, QualityEvent, CorrelationGroup, CorrelationItem, EventStore, OverrideEvent
 from services import (
-    transform_mes_to_flags, log_to_db, log_correlation_to_db, record_success, 
+    transform_mes_to_flags, log_to_db, record_success, 
     record_workflow_pending, record_workflow_rejected, logger, push_to_retry_queue,
     success_store, dlq_store, retry_queue_store, push_to_dlq
 )
 import httpx
 import asyncio
 import json
+from datetime import datetime, timezone
 
 app = FastAPI(title="Quality Data Validation & Integration Engine (QDVI)")
 
@@ -56,11 +57,10 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
         content={"status": "FAILED", "validationErrors": clean_errors, "detail": "Validation Error", "errors": [{"loc": e.get("loc"), "msg": e.get("msg"), "type": e.get("type")} for e in exc.errors()]}
     )
 
-from database import SessionLocal, QualityEvent, CorrelationEvent, EventStore, OverrideEvent, ReprocessRequest
+from database import SessionLocal, QualityEvent, CorrelationGroup, CorrelationItem, EventStore, OverrideEvent, ReprocessRequest
 from models import MESReprocessRequest
 
 @app.post("/api/v1/quality-results/reprocess")
-@app.post("/api/v1/mes/quality-events")
 async def manual_reprocess(request: MESReprocessRequest, background_tasks: BackgroundTasks):
     db = SessionLocal()
     try:
@@ -143,37 +143,15 @@ async def manual_reprocess(request: MESReprocessRequest, background_tasks: Backg
     finally:
         db.close()
 
-async def re_evaluate_held_assemblies(target_serial_number, background_tasks: BackgroundTasks):
-    if not target_serial_number:
-        return
-    import json
-    from database import SessionLocal, CorrelationEvent
-    from models import MESQualityResult
-    db = SessionLocal()
-    try:
-        held = db.query(CorrelationEvent).filter(
-            CorrelationEvent.entity_type == "ASSEMBLY",
-            CorrelationEvent.correlation_status == "WAITING_DEPENDENCIES",
-            CorrelationEvent.child_serial_number == target_serial_number
-        ).all()
-        for h in held:
-            if h.payload:
-                logger.info(f"Re-evaluating held assembly natively: {h.child_serial_number}")
-                re_payload = MESQualityResult(**json.loads(h.payload))
-                db.delete(h)
-                db.commit()
-                # Run correlation again natively bypassing duplication blocks!
-                await receive_quality_results(re_payload, background_tasks=background_tasks, is_reeval=True)
-    finally:
-        db.close()
 
 @app.post("/api/v1/quality-results")
+@app.post("/api/v1/mes/quality-events")
 async def receive_quality_results(payload: MESQualityResult, background_tasks: BackgroundTasks, is_reeval: bool = False):
     logger.info(f"Incoming MES payload: {payload.model_dump(mode='json', exclude_unset=True)}")
     logger.info("Validation result: PASS")
     
     import os, json
-    from database import SessionLocal, QualityEvent, OverrideEvent, CorrelationEvent
+    from database import SessionLocal, QualityEvent, OverrideEvent
     rules_path = os.path.join(os.path.dirname(__file__), 'rules.json')
     with open(rules_path, 'r') as f:
         rules_config = json.load(f)
@@ -235,121 +213,40 @@ async def receive_quality_results(payload: MESQualityResult, background_tasks: B
             finally:
                 db.close()
 
-    
-    # 1. SUB_ASSEMBLY Intercept
-    if payload.entityType == "SUB_ASSEMBLY":
-        from services import log_correlation_to_db
-        log_correlation_to_db(
-            event_id=payload.eventId,
-            source_system=payload.sourceSystem,
-            parent_sn=payload.parentSerialNumber,
-            child_sn=payload.serialNumber,
-            entity_type="SUB_ASSEMBLY",
-            step=payload.step,
-            result=payload.result,
-            correlation_status="PARTIAL_DATA",
-            payload_str=payload.model_dump_json()
-        )
-        
-        # Async Re-Evaluate natively using FastAPI BackgroundTasks!
-        background_tasks.add_task(re_evaluate_held_assemblies, payload.parentSerialNumber, background_tasks)
-        return {"status": "success", "message": f"Sub-assembly {payload.step} recorded"}
-    
-    # Workflow Logic Intercept (Overrides)
-    is_override = payload.originalResult is not None or payload.overrideResult is not None
-    if is_override:
-        if payload.approvalStatus == "PENDING":
-            record_workflow_pending(payload.model_dump(mode='json'), "Workflow approval is PENDING")
-            return {"status": "workflow_pending", "message": "Event queued for approval workflow"}
-        elif payload.approvalStatus == "REJECTED":
-            record_workflow_rejected(payload.model_dump(mode='json'), "Workflow approval was REJECTED")
-            return {"status": "workflow_rejected", "message": "Event override was rejected"}
+    # 0.5 OVERRIDE / WORKFLOW APPROVAL LOGIC
+    if payload.overrideResult or getattr(payload, "overrideReasonCode", None):
+        if getattr(payload, "approvalRequired", False):
+            # Check approval Status
+            app_status = getattr(payload, "approvalStatus", None)
+            if app_status == "REJECTED":
+                from services import record_workflow_rejected
+                record_workflow_rejected(payload.model_dump(mode='json'), "Override rejected")
+                return {"status": "WORKFLOW_REJECTED", "message": "Override request was rejected"}
+            elif app_status not in ["APPROVED", "AUTO_APPROVED"]:
+                from services import record_workflow_pending
+                record_workflow_pending(payload.model_dump(mode='json'), "Pending manual approval")
+                return {"status": "WORKFLOW_PENDING", "message": "Event is pending manual approval"}
 
-    # 2. ASSEMBLY Correlation Validation + OUT-OF-ORDER
-    sub_assemblies_data = [] 
-    if payload.entityType in ["ASSEMBLY", "MAIN_ASSEMBLY"]:
-        corr_rules = rules_config.get("correlationRules", {}).get(payload.step)
-        if not corr_rules and payload.step == "DECKING_VISION":
-            corr_rules = rules_config.get("correlationRules", {}).get("FINAL_ASSEMBLY")
+    # 1. ASSEMBLY / SUB_ASSEMBLY Correlation
+    if payload.entityType in ["SUB_ASSEMBLY", "MAIN_ASSEMBLY", "ASSEMBLY"]:
+        from services import handle_correlation
+        is_complete, corr_status, enhanced_payload = handle_correlation(payload.model_dump(mode='json'), rules_config)
+        
+        if corr_status == "FAILED":
+            from services import log_to_exception_queue
+            log_to_exception_queue(payload.eventId, "CORRELATION_FAILURE", "A required sub-assembly failed or timed out", payload.model_dump_json())
+            return JSONResponse(status_code=400, content={"detail": "Correlation Failure: Sub-assemblies did not pass"})
             
-        if corr_rules and corr_rules.get("requiresSubAssemblies"):
-            db = SessionLocal()
-            try:
-                # Check Database natively for sub-components
-                from database import CorrelationEvent
-                subs = db.query(CorrelationEvent).filter(
-                    CorrelationEvent.parent_serial_number == payload.serialNumber,
-                    CorrelationEvent.entity_type == "SUB_ASSEMBLY",
-                    CorrelationEvent.correlation_status == "PARTIAL_DATA"
-                ).all()
-                
-                existing_steps = [sub.step for sub in subs]
-                missing = [str(s) for s in corr_rules.get("subAssemblySteps", []) if s not in existing_steps and f"{s}_STEP" not in existing_steps]
-                
-                if missing:
-                    out_of_order = proc_rules.get("outOfOrderHandling", {})
-                    if out_of_order.get("enabled") and out_of_order.get("holdUntilDependenciesArrive"):
-                        from services import log_correlation_to_db
-                        log_correlation_to_db(
-                            event_id=payload.eventId,
-                            source_system=payload.sourceSystem,
-                            parent_sn=None,
-                            child_sn=payload.serialNumber,
-                            entity_type="ASSEMBLY",
-                            step=payload.step,
-                            result=payload.result,
-                            correlation_status="WAITING_DEPENDENCIES",
-                            payload_str=payload.model_dump_json()
-                        )
-                        return {"status": "success", "message": "Event held waiting for dependencies"}
-                    elif not corr_rules.get("allowPartial", False):
-                        err_str = f"Incomplete correlation: Missing sub-assemblies for steps {', '.join(missing)}"
-                        from services import log_correlation_to_db
-                        log_correlation_to_db(
-                            event_id=payload.eventId,
-                            source_system=payload.sourceSystem,
-                            parent_sn=None,
-                            child_sn=payload.serialNumber,
-                            entity_type="ASSEMBLY",
-                            step=payload.step,
-                            result=payload.result,
-                            correlation_status="INCOMPLETE_CORRELATION"
-                        )
-                        return JSONResponse(status_code=400, content={"detail": err_str})
-                    
-                if corr_rules.get("validationStrategy") == "ALL_SUBASSEMBLIES_PASS":
-                    for sub in subs:
-                        if sub.result != "PASS":
-                            payload.result = "FAIL" 
-                            
-                for sub in subs:
-                    sub_assemblies_data.append({
-                        "serial_no": sub.child_serial_number,
-                        "step": sub.step,
-                        "result": sub.result
-                    })
-                    
-                from services import log_correlation_to_db
-                log_correlation_to_db(
-                    event_id=payload.eventId,
-                    source_system=payload.sourceSystem,
-                    parent_sn=None,
-                    child_sn=payload.serialNumber,
-                    entity_type="ASSEMBLY",
-                    step=payload.step,
-                    result=payload.result,
-                    correlation_status="COMPLETE"
-                )
-            finally:
-                db.close()
+        if not is_complete:
+            return {"status": "success", "message": f"Event recorded. Group correlation is {corr_status}"}
+            
+        # Swap payload with the enhanced dict representing the complete built group!
+        payload_to_transform = enhanced_payload
+    else:
+        payload_to_transform = payload
                 
     try:
-        transformed = transform_mes_to_flags(payload)
-        
-        # Inject Sub-Assemblies into transformed structure!
-        if sub_assemblies_data:
-            transformed["sub_assemblies"] = sub_assemblies_data
-            
+        transformed = transform_mes_to_flags(payload_to_transform)
         logger.info(f"Transformed payload: {transformed}")
     except Exception as e:
         logger.error(f"Error details: Transformation Failure - {str(e)}")
@@ -363,6 +260,7 @@ async def receive_quality_results(payload: MESQualityResult, background_tasks: B
     max_retries = 3
     base_delay = 1
     
+    from services import log_processing_attempt
     async with httpx.AsyncClient() as client:
         last_error = None
         for attempt in range(max_retries):
@@ -371,6 +269,12 @@ async def receive_quality_results(payload: MESQualityResult, background_tasks: B
                 response.raise_for_status() 
                 
                 logger.info(f"FLAGS response: HTTP {response.status_code} - {response.json()}")
+                
+                if attempt == 0:
+                    attempt_status = "SENT"
+                else:
+                    attempt_status = "RETRY_SUCCESS"
+                log_processing_attempt(payload.eventId, attempt_num=attempt+1, attempt_type="TRANSMISSION", status=attempt_status, error_msg=None, flags_code=response.status_code, flags_body=response.text)
                 
                 record_success(payload, transformed)
                 
@@ -384,6 +288,8 @@ async def receive_quality_results(payload: MESQualityResult, background_tasks: B
             except Exception as e:
                 last_error = e
                 logger.error(f"Error details: FLAGS API Failure - {str(e)}")
+                resp_obj = getattr(e, "response", None)
+                log_processing_attempt(payload.eventId, attempt_num=attempt+1, attempt_type="TRANSMISSION", status="FAILED", error_msg=str(e), flags_code=getattr(resp_obj, "status_code", None), flags_body=getattr(resp_obj, "text", None))
                 
                 if attempt < max_retries - 1:
                     logger.warning(f"FLAGS Integraton attempt {attempt + 1} failed. Retrying...")
@@ -411,7 +317,7 @@ async def get_success_events():
 async def get_dlq_events():
     return {"data": dlq_store}
 
-@app.get("/api/v1/dashboard/events")
+@app.get("/api/v1/events")
 async def get_all_events():
     db = SessionLocal()
     try:
@@ -420,13 +326,33 @@ async def get_all_events():
     finally:
         db.close()
 
-@app.post("/api/v1/dashboard/retry/{event_id}")
-async def retry_event(event_id: str):
+@app.get("/api/v1/events/{eventId}")
+async def get_event_details(eventId: str):
     db = SessionLocal()
     try:
-        event = db.query(QualityEvent).filter(QualityEvent.id == event_id).first()
-        if not event or event.transmission_status == "SUCCESS" or not event.payload:
-            return JSONResponse(status_code=400, content={"detail": "Cannot retry this event."})
+        from database import ProcessingAttempt, ExceptionEvent
+        event = db.query(QualityEvent).filter(QualityEvent.event_id == eventId).first()
+        attempts = db.query(ProcessingAttempt).filter(ProcessingAttempt.event_id == eventId).all()
+        exceptions = db.query(ExceptionEvent).filter(ExceptionEvent.event_id == eventId).all()
+        return {
+            "event": event,
+            "attempts": attempts,
+            "exceptions": exceptions
+        }
+    finally:
+        db.close()
+
+@app.post("/api/v1/events/{eventId}/retry")
+async def manual_retry_event(eventId: str, background_tasks: BackgroundTasks):
+    db = SessionLocal()
+    try:
+        event = db.query(QualityEvent).filter(QualityEvent.event_id == eventId).first()
+        if not event:
+            return JSONResponse(status_code=404, content={"detail": "Event not found"})
+        if event.validation_status != "PASSED":
+            return JSONResponse(status_code=400, content={"detail": "Cannot retry, validation failed. Try replay."})
+        if event.transmission_status == "SUCCESS":
+            return JSONResponse(status_code=400, content={"detail": "Already sent to FLAGS."})
         
         payload_dict = json.loads(event.payload)
     finally:
@@ -434,9 +360,74 @@ async def retry_event(event_id: str):
         
     try:
         mes_data = MESQualityResult(**payload_dict)
-        return await receive_quality_results(mes_data)
+        return await receive_quality_results(mes_data, background_tasks, is_reeval=True)
     except Exception as e:
         return JSONResponse(status_code=400, content={"detail": f"Retry completely failed: {str(e)}"})
+
+@app.post("/api/v1/events/{eventId}/replay")
+async def replay_event(eventId: str, background_tasks: BackgroundTasks):
+    db = SessionLocal()
+    try:
+        from database import ExceptionEvent
+        exc = db.query(ExceptionEvent).filter(ExceptionEvent.event_id == eventId).order_by(ExceptionEvent.created_at.desc()).first()
+        if not exc or not exc.raw_payload:
+            event = db.query(QualityEvent).filter(QualityEvent.event_id == eventId).first()
+            if not event or not event.payload:
+                return JSONResponse(status_code=404, content={"detail": "Original raw payload not found for replay."})
+            payload_str = event.payload
+        else:
+            payload_str = exc.raw_payload
+            
+        payload_dict = json.loads(payload_str)
+    finally:
+        db.close()
+        
+    try:
+        from services import log_processing_attempt
+        log_processing_attempt(eventId, attempt_num=1, attempt_type="REPLAY", status="IN_PROGRESS", error_msg=None)
+        
+        mes_data = MESQualityResult(**payload_dict)
+        return await receive_quality_results(mes_data, background_tasks, is_reeval=True)
+    except Exception as e:
+        return JSONResponse(status_code=400, content={"detail": f"Replay mapping failed: {str(e)}"})
+
+@app.get("/api/v1/events/failed")
+async def get_failed_events():
+    db = SessionLocal()
+    try:
+        events = db.query(QualityEvent).filter(
+            (QualityEvent.validation_status == "FAILED") | 
+            (QualityEvent.transmission_status == "FAILED")
+        ).order_by(QualityEvent.created_at.desc()).limit(100).all()
+        return {"data": events}
+    finally:
+        db.close()
+
+@app.get("/api/v1/events/exceptions")
+async def get_exceptions():
+    db = SessionLocal()
+    try:
+        from database import ExceptionEvent
+        events = db.query(ExceptionEvent).order_by(ExceptionEvent.created_at.desc()).limit(100).all()
+        return {"data": events}
+    finally:
+        db.close()
+
+@app.post("/api/v1/exceptions/{exceptionId}/resolve")
+async def resolve_exception(exceptionId: str, resolvedBy: str = "SystemAdmin"):
+    db = SessionLocal()
+    try:
+        from database import ExceptionEvent
+        exc = db.query(ExceptionEvent).filter(ExceptionEvent.id == exceptionId).first()
+        if not exc:
+            return JSONResponse(status_code=404, content={"detail": "Exception not found"})
+        exc.resolved = True
+        exc.resolved_by = resolvedBy
+        exc.resolved_at = datetime.now(timezone.utc)
+        db.commit()
+        return {"status": "success", "message": "Exception marked as resolved"}
+    finally:
+        db.close()
 
 @app.get("/api/v1/dashboard/stats")
 async def get_stats():
@@ -453,3 +444,133 @@ async def get_stats():
         "total_retry": total_retry,
         "total_processed": total_processed
     }
+
+@app.get("/api/v1/rules")
+async def get_rules():
+    db = SessionLocal()
+    try:
+        from database import ValidationRule
+        rules = db.query(ValidationRule).all()
+        return {"data": rules}
+    finally:
+        db.close()
+
+@app.post("/api/v1/rules")
+async def create_rule(payload: dict):
+    db = SessionLocal()
+    try:
+        from database import ValidationRule
+        rule_id = f"{payload['processStep']}_{payload['assemblyLevel']}_{payload['resultType']}"
+        rule = db.query(ValidationRule).filter(ValidationRule.rule_id == rule_id).first()
+        if not rule:
+            rule = ValidationRule(rule_id=rule_id)
+            db.add(rule)
+        rule.process_step = payload['processStep']
+        rule.assembly_level = payload['assemblyLevel']
+        rule.result_type = payload['resultType']
+        rule.mandatory_fields_json = json.dumps(payload.get('mandatoryFields', []))
+        rule.forbidden_fields_json = json.dumps(payload.get('forbiddenFields', []))
+        rule.enabled = payload.get('enabled', True)
+        db.commit()
+        return {"status": "success"}
+    finally:
+        db.close()
+
+@app.put("/api/v1/rules/{ruleId}")
+async def update_rule(ruleId: str, payload: dict):
+    db = SessionLocal()
+    try:
+        from database import ValidationRule
+        rule = db.query(ValidationRule).filter(ValidationRule.rule_id == ruleId).first()
+        if not rule:
+            return JSONResponse(status_code=404, content={"detail": "Rule not found"})
+        if 'mandatoryFields' in payload:
+            rule.mandatory_fields_json = json.dumps(payload['mandatoryFields'])
+        if 'forbiddenFields' in payload:
+            rule.forbidden_fields_json = json.dumps(payload['forbiddenFields'])
+        if 'enabled' in payload:
+            rule.enabled = payload['enabled']
+        db.commit()
+        return {"status": "success"}
+    finally:
+        db.close()
+
+@app.get("/api/v1/mappings")
+async def get_mappings():
+    import os
+    mapping_path = os.path.join(os.path.dirname(__file__), 'mapping.json')
+    if not os.path.exists(mapping_path):
+        return {"data": {}}
+    with open(mapping_path, 'r') as f:
+        return {"data": json.load(f)}
+
+@app.post("/api/v1/mappings")
+async def create_mapping(payload: dict):
+    import os
+    mapping_path = os.path.join(os.path.dirname(__file__), 'mapping.json')
+    with open(mapping_path, 'r') as f:
+        config = json.load(f)
+    config[payload['sourceField']] = payload['targetField']
+    with open(mapping_path, 'w') as f:
+        json.dump(config, f, indent=2)
+    
+    # Reload in services natively via restarting or modifying global map. 
+    # For now, it updates the json configuration reliably!
+    from services import MAPPING_CONFIG
+    MAPPING_CONFIG[payload['sourceField']] = payload['targetField']
+    return {"status": "success"}
+
+@app.put("/api/v1/mappings/{sourceField}")
+async def update_mapping(sourceField: str, payload: dict):
+    import os
+    mapping_path = os.path.join(os.path.dirname(__file__), 'mapping.json')
+    with open(mapping_path, 'r') as f:
+        config = json.load(f)
+    
+    if sourceField in config:
+        if 'targetField' in payload:
+            config[sourceField] = payload['targetField']
+            from services import MAPPING_CONFIG
+            MAPPING_CONFIG[sourceField] = payload['targetField']
+        
+        with open(mapping_path, 'w') as f:
+            json.dump(config, f, indent=2)
+        return {"status": "success"}
+    return JSONResponse(status_code=404, content={"detail": "Mapping not found"})@app.get("/api/v1/correlation")
+def list_correlations():
+    from database import SessionLocal, CorrelationGroup
+    db = SessionLocal()
+    try:
+        groups = db.query(CorrelationGroup).order_by(CorrelationGroup.created_at.desc()).limit(100).all()
+        return {"data": [{"id": g.id, "parent_serial_number": g.parent_serial_number, "status": g.status, "created_at": str(g.created_at)} for g in groups]}
+    finally:
+        db.close()
+
+@app.get("/api/v1/correlation/{parent_serial_number}")
+def view_correlation(parent_serial_number: str):
+    from database import SessionLocal, CorrelationGroup, CorrelationItem
+    db = SessionLocal()
+    try:
+        group = db.query(CorrelationGroup).filter(CorrelationGroup.parent_serial_number == parent_serial_number).first()
+        if not group:
+            return JSONResponse(status_code=404, content={"detail": "Correlation group not found"})
+            
+        items = db.query(CorrelationItem).filter(CorrelationItem.group_id == group.id).all()
+        return {
+            "id": group.id,
+            "parent_serial_number": group.parent_serial_number,
+            "status": group.status,
+            "created_at": str(group.created_at),
+            "updated_at": str(group.updated_at),
+            "items": [
+                {
+                    "serial_number": i.serial_number,
+                    "assembly_level": i.assembly_level,
+                    "process_step": i.process_step,
+                    "result_type": i.result_type,
+                    "validation_status": i.validation_status
+                } for i in items
+            ]
+        }
+    finally:
+        db.close()

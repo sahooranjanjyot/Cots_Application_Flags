@@ -14,18 +14,20 @@ def test_dups_and_out_of_order():
     evt_b = f"EVT-{uuid.uuid4().hex[:8]}"
     evt_assy = f"EVT-{uuid.uuid4().hex[:8]}"
 
+    assy_parent = f"ASSY-{uuid.uuid4().hex[:8]}"
+    
     # 1. Provide first SUB_ASSEMBLY and wait
     res_sub_1 = client.post("/api/v1/quality-results", json={
         "eventType": "QUALITY_RESULT",
         "eventId": evt_a,
         "sourceSystem": "MES-LINE-1",
         "entityType": "SUB_ASSEMBLY",
-        "step": "DC_TOOL",
+        "step": "DC_TOOL_STEP",
         "result": "PASS",
         "productId": "PA-101",
         "serialNumber": "SUB-A",
-        "parentSerialNumber": "ASSY-ORDER-999",
-        "timestamp": "2026-04-25T11:00:00Z"
+        "parentSerialNumber": assy_parent,
+        "eventTimestamp": "2026-04-25T11:00:00Z"
     })
     assert res_sub_1.status_code == 200
 
@@ -35,12 +37,12 @@ def test_dups_and_out_of_order():
         "eventId": evt_a,
         "sourceSystem": "MES-LINE-1",
         "entityType": "SUB_ASSEMBLY",
-        "step": "DC_TOOL",
+        "step": "DC_TOOL_STEP",
         "result": "PASS",
         "productId": "PA-101",
         "serialNumber": "SUB-A",
-        "parentSerialNumber": "ASSY-ORDER-999",
-        "timestamp": "2026-04-25T11:00:00Z"
+        "parentSerialNumber": assy_parent,
+        "eventTimestamp": "2026-04-25T11:00:00Z"
     })
     assert res_sub_dup.json()["reason"] == "DUPLICATE_EVENT"
 
@@ -48,14 +50,15 @@ def test_dups_and_out_of_order():
     res_assy_early = client.post("/api/v1/quality-results", json={
         "eventType": "QUALITY_RESULT",
         "eventId": evt_assy,
-        "entityType": "ASSEMBLY",
-        "step": "FINAL_ASSEMBLY",
+        "sourceSystem": "MES-LINE-1",
+        "entityType": "MAIN_ASSEMBLY",
+        "step": "DECKING_VISION",
         "result": "PASS",
         "productId": "PA-101",
-        "serialNumber": "ASSY-ORDER-999",
-        "timestamp": "2026-04-25T11:05:00Z"
+        "serialNumber": assy_parent,
+        "eventTimestamp": "2026-04-25T11:05:00Z"
     })
-    assert res_assy_early.json()["message"] == "Event held waiting for dependencies"
+    assert "Group correlation is IN_PROGRESS" in res_assy_early.json()["message"]
 
     # 4. Provide the missing Sub-Assembly to trigger Asynchronous Re-Evaluation!
     res_sub_2 = client.post("/api/v1/quality-results", json={
@@ -63,12 +66,12 @@ def test_dups_and_out_of_order():
         "eventId": evt_b,
         "sourceSystem": "MES-LINE-1",
         "entityType": "SUB_ASSEMBLY",
-        "step": "FLUID_FILL",
+        "step": "FLUID_FILL_STEP",
         "result": "PASS",
         "productId": "PA-101",
         "serialNumber": "SUB-B",
-        "parentSerialNumber": "ASSY-ORDER-999",
-        "timestamp": "2026-04-25T11:10:00Z"
+        "parentSerialNumber": assy_parent,
+        "eventTimestamp": "2026-04-25T11:10:00Z"
     })
     print("SUB 2 Late Completion:", res_sub_2.json())
     assert res_sub_2.status_code == 200
