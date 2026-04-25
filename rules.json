@@ -1,0 +1,150 @@
+{
+  "eventType": "QUALITY_RESULT",
+  "steps": {
+    "ROUTE": {
+      "allowedResults": ["PASS", "FAIL"],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp"],
+      "passRules": {"forbiddenFields": ["errorCode", "errorDescription"]},
+      "failRules": {"mandatoryFields": ["errorCode", "errorDescription"]}
+    },
+    "DC_TOOL": {
+      "allowedResults": ["PASS", "FAIL"],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp"],
+      "passRules": {"forbiddenFields": []},
+      "failRules": {"mandatoryFields": []}
+    },
+    "FLUID_FILL": {
+      "allowedResults": ["PASS", "FAIL"],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp"],
+      "passRules": {"forbiddenFields": []},
+      "failRules": {"mandatoryFields": []}
+    },
+    "FINAL_ASSEMBLY": {
+      "allowedResults": ["PASS", "FAIL"],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp"],
+      "passRules": {"forbiddenFields": []},
+      "failRules": {"mandatoryFields": []}
+    }
+  },
+  "schemaRegistry": {
+    "detectionStrategy": {
+      "rules": [
+        {"field": "sourceSystem", "value": "LEGACY_SCADA", "inferVersion": "v0.9"},
+        {"hasField": "oldEventId", "inferVersion": "v0.9"}
+      ],
+      "defaultVersion": "v1.0"
+    },
+    "v1.0": {
+      "status": "ACTIVE",
+      "effectiveFrom": "2026-01-01T00:00:00Z",
+      "mandatoryFields": ["eventId", "step"],
+      "optionalFields": ["correlationId", "result", "productId", "serialNumber", "sourceSystem"],
+      "fieldAliases": {
+        "oldEventId": "eventId",
+        "oldSerialNumber": "serialNumber"
+      },
+      "defaultValues": {
+        "schemaVersion": "v1.0"
+      }
+    },
+    "v0.9": {
+      "status": "DEPRECATED",
+      "effectiveFrom": "2025-01-01T00:00:00Z",
+      "mandatoryFields": ["eventId", "step"],
+      "fieldAliases": {
+        "oldEventId": "eventId"
+      },
+      "defaultValues": {
+        "schemaVersion": "v0.9"
+      }
+    },
+    "v0.1": {
+      "status": "RETIRED",
+      "effectiveFrom": "2020-01-01T00:00:00Z"
+    }
+  },
+  "correlationRules": {
+    "FINAL_ASSEMBLY": {
+      "requiresSubAssemblies": true,
+      "subAssemblySteps": [
+        "DC_TOOL",
+        "FLUID_FILL"
+      ],
+      "validationStrategy": "ALL_SUBASSEMBLIES_PASS",
+      "allowPartial": false
+    }
+  },
+  "overrideValidation": {
+    "ROUTE": {
+      "requireApproval": true,
+      "requireReasonCode": true,
+      "allowOverrideTo": "PASS"
+    },
+    "ROUTE_NO_APPROVAL": {
+      "requireApproval": false,
+      "requireReasonCode": true,
+      "allowOverrideTo": "PASS"
+    }
+  },
+  "overrideRules": {
+    "ROUTE": {
+      "allowedOverride": true,
+      "allowedTransitions": [
+        { "from": "FAIL", "to": "PASS" },
+        { "from": "PASS", "to": "FAIL" }
+      ],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp", "overrideBy", "overrideTimestamp", "overrideReasonCode"],
+      "approvalConfig": {"approvalRequired": true, "approverRoles": ["SUPERVISOR", "QUALITY_MANAGER"]}
+    },
+    "ROUTE_NO_APPROVAL": {
+      "allowedOverride": true,
+      "allowedTransitions": [
+        { "from": "FAIL", "to": "PASS" },
+        { "from": "PASS", "to": "FAIL" }
+      ],
+      "mandatoryFields": ["productId", "serialNumber", "timestamp", "overrideBy", "overrideTimestamp", "overrideReasonCode"],
+      "approvalConfig": {"approvalRequired": false, "approverRoles": []}
+    }
+  },
+  "eventProcessingRules": {
+    "idempotencyKeyFields": [
+      "eventId",
+      "sourceSystem"
+    ],
+    "correlationKeyFields": [
+      "correlationId",
+      "serialNumber",
+      "parentSerialNumber"
+    ],
+    "outOfOrderHandling": {
+      "enabled": true,
+      "holdUntilDependenciesArrive": true,
+      "dependencyTimeoutMinutes": 1440
+    },
+    "duplicateHandling": {
+      "enabled": true,
+      "duplicateAction": "IGNORE"
+    },
+    "reprocessingRules": {
+      "allowedStatusesForRetry": [
+        "FAILED",
+        "EXCEPTION",
+        "HOLDING_FOR_DEPENDENCY"
+      ],
+      "retryPolicy": {
+        "maxRetryAttempts": 3,
+        "backoffStrategy": "FIXED",
+        "retryIntervalSeconds": 300
+      },
+      "manualReplayPolicy": {
+        "approvalRequired": true,
+        "approverRoles": ["SUPERVISOR", "QUALITY_MANAGER", "SYSTEM_ADMIN"]
+      },
+      "duplicateProtection": {
+        "enabled": true,
+        "reuseOriginalIdempotencyKey": true,
+        "allowUpdateInsteadOfCreate": true
+      }
+    }
+  }
+}

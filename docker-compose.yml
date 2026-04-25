@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: qdvi_user
+      POSTGRES_PASSWORD: qdvi_password
+      POSTGRES_DB: qdvi_engine
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qdvi_user -d qdvi_engine"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://qdvi_user:qdvi_password@db:5432/qdvi_engine
+      - FLAGS_ENDPOINT=http://mock_flags:8080/flags/api/v1/quality
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

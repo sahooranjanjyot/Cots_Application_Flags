@@ -1,0 +1,19 @@
+{
+  "eventType": "event_type",
+  "step": "process_step",
+  "result": "quality_status",
+  "productId": "product_code",
+  "serialNumber": "serial_no",
+  "timestamp": "event_time",
+  "stationId": "station_id",
+  "operatorId": "operator_id",
+  "errorCode": "defect_code",
+  "errorDescription": "defect_description",
+  "originalResult": "original_quality_status",
+  "overrideResult": "final_quality_status",
+  "overrideBy": "override_user",
+  "overrideTimestamp": "override_time",
+  "overrideReasonCode": "override_reason_code",
+  "overrideReasonDescription": "override_reason_desc",
+  "approvalStatus": "approval_status"
+}
