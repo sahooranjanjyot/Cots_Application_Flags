@@ -179,6 +179,12 @@ class MESQualityResult(BaseModel):
         assembly_level = self.entityType or "MAIN_ASSEMBLY"
         rule_id = f"{self.step}_{assembly_level}_{result_type}"
         
+        parent_serial = getattr(self, "parentSerialNumber", None)
+        if assembly_level == "SUB_ASSEMBLY" and not parent_serial:
+            raise ValueError("parentSerialNumber is mandatory for SUB_ASSEMBLY objects")
+        if assembly_level == "MAIN_ASSEMBLY" and parent_serial:
+            raise ValueError("parentSerialNumber must be NULL for MAIN_ASSEMBLY objects")
+        
         from database import SessionLocal, ValidationRule
         db = SessionLocal()
         try:

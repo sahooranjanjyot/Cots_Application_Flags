@@ -1,60 +1,116 @@
-import uuid
 from fastapi.testclient import TestClient
+import uuid
 from main import app
-from database import get_db, Base, engine
+import json
 
 client = TestClient(app)
 
-def test_correlation_flow():
-    Base.metadata.create_all(bind=engine)
-    from database import seed_static_limits
-    seed_static_limits()
+def test_correlation_engine_workflow():
+    parent_serial = f"PARENT-SN-{uuid.uuid4().hex[:6]}"
+    child_serial_1 = f"CHILD1-{uuid.uuid4().hex[:6]}"
+    child_serial_2 = f"CHILD2-{uuid.uuid4().hex[:6]}"
     
-    # 1. Provide first SUB_ASSEMBLY
-    res1 = client.post("/api/v1/quality-results", json={
+    # 1. Send Sub-Assembly 1
+    sa1_payload = {
+        "eventId": f"EV-SA1-{uuid.uuid4().hex[:4]}",
         "eventType": "QUALITY_RESULT",
-        "eventId": f"EVT-{uuid.uuid4().hex[:8]}",
+        "sourceSystem": "TEST",
         "entityType": "SUB_ASSEMBLY",
-        "step": "DC_TOOL",
+        "serialNumber": child_serial_1,
+        "parentSerialNumber": parent_serial,
+        "step": "DC_TOOL_STEP",
         "result": "PASS",
-        "productId": "PA-101",
-        "serialNumber": "SUB-001",
-        "parentSerialNumber": "ASSY-999",
-        "timestamp": "2026-04-25T11:00:00Z"
-    })
-    print(res1.json())
-    assert res1.status_code == 200
+        "productId": "ENG-A",
+        "eventTimestamp": "2026-04-25T12:00:00Z"
+    }
     
-    # 2. Provide second SUB_ASSEMBLY
-    res2 = client.post("/api/v1/quality-results", json={
+    resp1 = client.post("/api/v1/quality-results", json=sa1_payload)
+    assert resp1.status_code == 200
+    assert "Group correlation is IN_PROGRESS" in resp1.json()["message"]
+    
+    # 2. View Group Status
+    resp_group = client.get(f"/api/v1/correlation/{parent_serial}")
+    assert resp_group.status_code == 200
+    assert resp_group.json()["status"] == "IN_PROGRESS"
+    
+    # 3. Send Main Assembly
+    ma_payload = {
+        "eventId": f"EV-MA-{uuid.uuid4().hex[:4]}",
         "eventType": "QUALITY_RESULT",
-        "eventId": f"EVT-{uuid.uuid4().hex[:8]}",
-        "entityType": "SUB_ASSEMBLY",
-        "step": "FLUID_FILL",
+        "sourceSystem": "TEST",
+        "entityType": "MAIN_ASSEMBLY",
+        "serialNumber": parent_serial,
+        "parentSerialNumber": None,
+        "step": "DECKING_VISION",
         "result": "PASS",
-        "productId": "PA-101",
-        "serialNumber": "SUB-002",
-        "parentSerialNumber": "ASSY-999",
-        "timestamp": "2026-04-25T11:01:00Z"
-    })
-    print(res2.json())
-    assert res2.status_code == 200
+        "productId": "CAR-Z",
+        "eventTimestamp": "2026-04-25T12:05:00Z"
+    }
+    
+    resp_ma = client.post("/api/v1/quality-results", json=ma_payload)
+    assert resp_ma.status_code == 200
+    assert "Group correlation is IN_PROGRESS" in resp_ma.json()["message"]
+    
+    # 4. Send Sub-Assembly 2
+    sa2_payload = {
+        "eventId": f"EV-SA2-{uuid.uuid4().hex[:4]}",
+        "eventType": "QUALITY_RESULT",
+        "sourceSystem": "TEST",
+        "entityType": "SUB_ASSEMBLY",
+        "serialNumber": child_serial_2,
+        "parentSerialNumber": parent_serial,
+        "step": "FLUID_FILL_STEP",
+        "result": "PASS",
+        "productId": "FLUID-X",
+        "eventTimestamp": "2026-04-25T12:10:00Z"
+    }
+    
+    resp_sa2 = client.post("/api/v1/quality-results", json=sa2_payload)
+    assert resp_sa2.status_code == 200
+    
+    # At this point, it should be COMPLETE and forwarded to FLAGS!
+    resp_group_final = client.get(f"/api/v1/correlation/{parent_serial}")
+    assert resp_group_final.status_code == 200
+    assert resp_group_final.json()["status"] == "COMPLETE"
 
-    # 3. Provide FINAL ASSEMBLY
-    res3 = client.post("/api/v1/quality-results", json={
+def test_correlation_failure():
+    parent_serial = f"PARENT-SN-{uuid.uuid4().hex[:6]}"
+    child_serial_1 = f"CHILD1-{uuid.uuid4().hex[:6]}"
+    child_serial_2 = f"CHILD2-{uuid.uuid4().hex[:6]}"
+    
+    # 1. Main Assembly
+    ma_payload = {
+        "eventId": f"EV-MA-{uuid.uuid4().hex[:4]}",
         "eventType": "QUALITY_RESULT",
-        "eventId": f"EVT-{uuid.uuid4().hex[:8]}",
-        "entityType": "ASSEMBLY",
-        "step": "FINAL_ASSEMBLY",
+        "sourceSystem": "TEST",
+        "entityType": "MAIN_ASSEMBLY",
+        "serialNumber": parent_serial,
+        "parentSerialNumber": None,
+        "step": "DECKING_VISION",
         "result": "PASS",
-        "productId": "PA-101",
-        "serialNumber": "ASSY-999",
-        "timestamp": "2026-04-25T11:10:00Z"
-    })
+        "productId": "CAR-Z",
+        "eventTimestamp": "2026-04-25T12:00:00Z"
+    }
+    client.post("/api/v1/quality-results", json=ma_payload)
     
-    print(res3.json())
-    assert res3.status_code == 200
-    assert "SUCCESS" in res3.json()["status"] 
-    # Test passed perfectly!
+    # 2. Sub-Assembly exactly FAIL
+    sa1_payload = {
+        "eventId": f"EV-SA1-{uuid.uuid4().hex[:4]}",
+        "eventType": "QUALITY_RESULT",
+        "sourceSystem": "TEST",
+        "entityType": "SUB_ASSEMBLY",
+        "serialNumber": child_serial_1,
+        "parentSerialNumber": parent_serial,
+        "step": "DC_TOOL_STEP",
+        "result": "FAIL",
+        "productId": "ENG-A",
+        "defectCode": "D001",
+        "defectDescription": "Loose bolt",
+        "eventTimestamp": "2026-04-25T12:05:00Z"
+    }
+    resp = client.post("/api/v1/quality-results", json=sa1_payload)
+    assert resp.status_code == 400
+    assert "Correlation Failure: Sub-assemblies did not pass" in resp.json()["detail"]
     
-# test_correlation_flow()
+    resp_group = client.get(f"/api/v1/correlation/{parent_serial}")
+    assert resp_group.json()["status"] == "FAILED"

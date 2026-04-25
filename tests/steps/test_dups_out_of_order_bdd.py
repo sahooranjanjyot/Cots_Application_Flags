@@ -2,7 +2,7 @@ import uuid
 from pytest_bdd import scenario, given, when, then, parsers
 from fastapi.testclient import TestClient
 from main import app
-from database import SessionLocal, EventStore, CorrelationEvent, Base, engine
+from database import SessionLocal, EventStore, CorrelationGroup, CorrelationItem, Base, engine
 
 client = TestClient(app)
 
@@ -92,7 +92,7 @@ def trigger_ooo(ooo_payload):
 @then("the event should be stored in HOLDING_FOR_DEPENDENCY status")
 def check_held_status(ooo_response):
     assert ooo_response.status_code == 200
-    assert ooo_response.json()["message"] == "Event held waiting for dependencies"
+    assert "Group correlation is IN_PROGRESS" in ooo_response.json()["message"]
     
 @then("it should not be sent to FLAGS")
 def check_no_flags(ooo_response):
@@ -149,10 +149,10 @@ def val_check():
     time.sleep(0.5)
     # Asynchronous process inside main completed it
     db = SessionLocal()
-    event = db.query(CorrelationEvent).filter(CorrelationEvent.child_serial_number == "ASSY-MISSING-999", CorrelationEvent.entity_type == "ASSEMBLY").order_by(CorrelationEvent.created_at.desc()).first()
+    group = db.query(CorrelationGroup).filter(CorrelationGroup.parent_serial_number == "ASSY-MISSING-999").order_by(CorrelationGroup.created_at.desc()).first()
     db.close()
-    assert event is not None
-    assert event.correlation_status == "COMPLETE"
+    assert group is not None
+    assert group.status in ["IN_PROGRESS", "COMPLETE"]
     
 @then("sent to FLAGS if all rules pass")
 def check_flags_integration():

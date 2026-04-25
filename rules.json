@@ -64,11 +64,11 @@
     }
   },
   "correlationRules": {
-    "FINAL_ASSEMBLY": {
+    "DECKING_VISION": {
       "requiresSubAssemblies": true,
       "subAssemblySteps": [
-        "DC_TOOL",
-        "FLUID_FILL"
+        "DC_TOOL_STEP",
+        "FLUID_FILL_STEP"
       ],
       "validationStrategy": "ALL_SUBASSEMBLIES_PASS",
       "allowPartial": false

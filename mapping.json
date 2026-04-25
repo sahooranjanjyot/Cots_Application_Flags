@@ -1,4 +1,6 @@
 {
+  "eventId": "event_id",
+  "correlationId": "correlation_id",
   "eventType": "event_type",
   "step": "process_step",
   "result": "quality_status",
@@ -7,8 +9,8 @@
   "timestamp": "event_time",
   "stationId": "station_id",
   "operatorId": "operator_id",
-  "errorCode": "defect_code",
-  "errorDescription": "defect_description",
+  "defectCode": "defect_code",
+  "defectDescription": "defect_description",
   "originalResult": "original_quality_status",
   "overrideResult": "final_quality_status",
   "overrideBy": "override_user",

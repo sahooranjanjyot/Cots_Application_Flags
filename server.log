@@ -1,0 +1,2031 @@
+INFO:     Started server process [67075]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Validation Error: missing, Field required
+Event pushed to DLQ. Reason: Validation Error: missing, Field required
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:53563 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: missing, Field required
+Event pushed to DLQ. Reason: Validation Error: missing, Field required
+INFO:     127.0.0.1:53564 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: missing, Field required
+Event pushed to DLQ. Reason: Validation Error: missing, Field required
+INFO:     127.0.0.1:53565 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: missing, Field required
+Event pushed to DLQ. Reason: Validation Error: missing, Field required
+INFO:     127.0.0.1:53566 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     Started server process [67752]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:53588 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+INFO:     127.0.0.1:53589 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+INFO:     127.0.0.1:53590 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, eventType must be QUALITY_RESULT
+INFO:     127.0.0.1:53591 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53600 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53601 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory field for override: overrideReasonCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for override: overrideReasonCode
+INFO:     127.0.0.1:53602 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53603 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53629 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53628 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53630 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory field for override: overrideReasonCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for override: overrideReasonCode
+INFO:     127.0.0.1:53631 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53632 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+INFO:     Started server process [70285]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Validation Error: value_error, Value error, errorCode is forbidden
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, errorCode is forbidden
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:53674 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53675 - "POST /api/v1/events/EV-TEST1-05442a/retry HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53676 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53677 - "POST /api/v1/events/EV-TEST3-17b58b/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53678 - "POST /api/v1/events/EV-TEST1-05442a/replay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53684 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53683 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53685 - "POST /api/v1/events/EV-TEST1-c7ed38/retry HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53686 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53687 - "POST /api/v1/events/EV-TEST3-313d1d/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53689 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53688 - "POST /api/v1/events/EV-TEST1-c7ed38/replay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53702 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53701 - "POST /api/v1/mes/quality-events HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53703 - "POST /api/v1/events/EV-TEST1-4f1b68/retry HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53704 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53705 - "POST /api/v1/events/EV-TEST3-89869f/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53707 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53706 - "POST /api/v1/events/EV-TEST1-4f1b68/replay HTTP/1.1" 200 OK
+INFO:     Started server process [71151]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:53719 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:53719 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:53719 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:53718 - "POST /api/v1/mes/quality-events HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:53721 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:53721 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:53721 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:53720 - "POST /api/v1/events/EV-TEST1-4b9180/retry HTTP/1.1" 502 Bad Gateway
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53722 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53723 - "POST /api/v1/events/EV-TEST3-efc5d8/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53725 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:53725 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:53725 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:53724 - "POST /api/v1/events/EV-TEST1-4b9180/replay HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:53771 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:53771 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:53771 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:53770 - "POST /api/v1/mes/quality-events HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:53773 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53772 - "POST /api/v1/events/EV-TEST1-3263b5/retry HTTP/1.1" 200 OK
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:53774 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53775 - "POST /api/v1/events/EV-TEST3-c73b33/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53777 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:53777 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:53777 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:53776 - "POST /api/v1/events/EV-TEST1-3263b5/replay HTTP/1.1" 502 Bad Gateway
+INFO:     Started server process [83320]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:55887 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:55887 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:55887 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:55886 - "POST /api/v1/mes/quality-events HTTP/1.1" 502 Bad Gateway
+INFO:     127.0.0.1:55889 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55888 - "POST /api/v1/events/EV-TEST1-2aa1e4/retry HTTP/1.1" 200 OK
+Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory field for FAIL: defectCode
+INFO:     127.0.0.1:55890 - "POST /api/v1/mes/quality-events HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:55891 - "POST /api/v1/events/EV-TEST3-3ba048/retry HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:55893 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 1 failed. Retrying...
+INFO:     127.0.0.1:55893 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integraton attempt 2 failed. Retrying...
+INFO:     127.0.0.1:55893 - "POST /flags/api/v1/quality HTTP/1.1" 503 Service Unavailable
+Error details: FLAGS API Failure - Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+FLAGS Integration failed after max retries
+Event pushed to RETRY QUEUE after exhaustion. Error: Server error '503 Service Unavailable' for url 'http://127.0.0.1:8000/flags/api/v1/quality'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+INFO:     127.0.0.1:55892 - "POST /api/v1/events/EV-TEST1-2aa1e4/replay HTTP/1.1" 502 Bad Gateway
+INFO:     Started server process [83807]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Generated a total of 48 rules.
+Inserted: 0
+Updated: 48
+INFO:     127.0.0.1:56062 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56065 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56090 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56101 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56110 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56128 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56141 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56142 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56148 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56149 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56158 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56159 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56160 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56162 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56163 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56164 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56165 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56166 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56167 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56168 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56170 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56172 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56173 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56259 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56270 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56271 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56273 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56274 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56275 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56277 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56278 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56279 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56280 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56281 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56282 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56283 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56284 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56285 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56286 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56287 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56294 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56304 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56305 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56306 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56322 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56328 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56334 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56343 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56344 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56345 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56347 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56348 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56349 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56350 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56351 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56352 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56354 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56355 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56356 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56357 - "POST /flags/api/v1/quality HTTP/1.1" 200 OK
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56587 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56586 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56588 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56589 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56591 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56592 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56593 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56594 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56595 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56596 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56598 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56608 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56609 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56610 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56611 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56612 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56613 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56614 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56615 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56616 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56627 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56628 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56629 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56630 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56631 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56632 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56633 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56634 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56635 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56636 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56639 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56640 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56654 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56655 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56656 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56657 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56658 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56659 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56660 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56661 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56662 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56663 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56664 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56665 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56666 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56671 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56672 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56677 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56678 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56681 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56682 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56688 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56689 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56695 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56696 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56697 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56698 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56699 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56700 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56701 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56702 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56703 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56704 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56705 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56706 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56710 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56711 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56719 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56720 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56721 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56722 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56723 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56724 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56725 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56726 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56729 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56730 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56732 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56735 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56736 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56751 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56752 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56753 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56754 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56755 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56757 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56758 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56759 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56760 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56761 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56762 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56766 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56767 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56768 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56774 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56802 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56803 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56804 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56805 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56806 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56853 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56854 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56855 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56856 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56857 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56858 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56859 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56860 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56861 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56862 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56863 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56864 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56865 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56866 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56867 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56868 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56869 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56870 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56871 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56872 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56873 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56874 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56875 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56876 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56877 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56878 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56879 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56880 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56881 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56882 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56891 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56892 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56893 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56894 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56895 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56896 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56897 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56898 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56887 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56888 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56889 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56890 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56899 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56900 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56901 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56902 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56903 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56904 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56905 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56906 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56907 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56908 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56909 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56910 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56911 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56912 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56913 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56914 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56915 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56916 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56917 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56918 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56919 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56920 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56921 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56922 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56923 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56924 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56925 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56926 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56927 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56928 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56929 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56930 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56931 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56932 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56933 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56934 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56935 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56936 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56950 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56952 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56959 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56960 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56961 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56962 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56963 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56964 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56965 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56966 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56967 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56968 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56969 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56973 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56987 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56988 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56989 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56990 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56991 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:56992 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57053 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57054 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57055 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57056 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57057 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57058 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57059 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57060 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57061 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57062 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57063 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57064 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57065 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57066 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57070 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57071 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57073 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57074 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57075 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57076 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57077 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57078 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57079 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57080 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57081 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57082 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57083 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57084 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57085 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57086 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57087 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57088 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57089 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57093 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57094 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57095 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57096 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57097 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57098 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57103 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57104 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57105 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57106 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57107 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57108 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57109 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57110 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57112 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57115 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57116 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57117 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57118 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57119 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57120 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57121 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57122 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57123 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57128 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57129 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57130 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57131 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57132 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57133 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57134 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57135 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57136 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57137 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57138 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57139 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57140 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57141 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57142 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57143 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57144 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57145 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57146 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57147 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57148 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57149 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57150 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57158 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57172 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57173 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57174 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57175 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57176 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57180 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57192 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57193 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57194 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57195 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57197 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57198 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57199 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57200 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57201 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57202 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57203 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57204 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57205 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57263 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57264 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57265 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57271 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57272 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57273 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57274 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57275 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57276 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57277 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57278 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57279 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57280 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57281 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57282 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57287 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57288 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57289 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57290 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57291 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57292 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57293 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57294 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57296 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57297 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57298 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57299 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57300 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57301 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57302 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57303 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57304 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57305 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57306 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57307 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57308 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57310 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57311 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57312 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57313 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57314 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57315 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57316 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57318 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57319 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57320 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57321 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57322 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57323 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57324 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57325 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57326 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57327 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57328 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57329 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57330 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57331 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57332 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57333 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57334 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57335 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57336 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57337 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57338 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57339 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57340 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57341 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57342 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57343 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57344 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57345 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57346 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57347 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57348 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57349 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57350 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57351 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57352 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57353 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57354 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57363 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57365 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57380 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57381 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57382 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57387 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57388 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57389 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57403 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57431 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57432 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57433 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57434 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57446 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57447 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57448 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57449 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57450 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57451 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57452 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57453 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57454 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57455 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57456 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57457 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57458 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57459 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57472 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57473 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57474 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57475 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57476 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57477 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57478 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57479 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57480 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57481 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57482 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57483 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57484 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57495 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57496 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57497 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57498 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57499 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57500 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57501 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57502 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57503 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57504 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57505 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57506 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57507 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57508 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57509 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57510 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57511 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57512 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57513 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57514 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57515 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57516 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57517 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57518 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57519 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57520 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57521 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57522 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57523 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57524 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57525 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57526 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57527 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57528 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57529 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57530 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57531 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57532 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57533 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57534 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57535 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57536 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57537 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57538 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57539 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57540 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57541 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57542 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57543 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57544 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57545 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57546 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57547 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57548 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57549 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57550 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57551 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57552 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57553 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57554 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57559 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57565 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57569 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57573 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57580 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57581 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57587 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57588 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57589 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57595 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57596 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57597 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57607 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57608 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57609 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57615 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57616 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57617 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57618 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57619 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57620 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57628 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57629 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57630 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57631 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57632 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57643 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57644 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57645 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57646 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57647 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57653 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57654 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57655 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57656 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57657 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57658 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57659 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57660 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57661 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57668 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57669 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57670 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57671 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57672 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57681 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57682 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57683 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57684 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57685 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57686 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57687 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57691 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57692 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57693 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57694 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57695 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57696 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57697 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57698 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57699 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57700 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57706 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57707 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57708 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57709 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57710 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57714 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57715 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57716 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57717 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57718 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57719 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57723 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57724 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57725 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57726 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57727 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57728 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57729 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57730 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57731 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57732 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57733 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57734 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57735 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57736 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57737 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57738 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57739 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57741 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57742 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57743 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57744 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57745 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+Event pushed to DLQ. Reason: Validation Error: value_error, Value error, Missing mandatory schema field: eventId
+INFO:     127.0.0.1:57752 - "POST /api/v1/quality-results HTTP/1.1" 400 Bad Request
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [83807]

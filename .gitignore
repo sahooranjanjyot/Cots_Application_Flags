@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+.env
+quality_engine.db
+.pytest_cache/

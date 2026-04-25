@@ -72,19 +72,27 @@ class OverrideEvent(Base):
     payload = Column(String, nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
-class CorrelationEvent(Base):
-    __tablename__ = "correlation_events"
+class CorrelationGroup(Base):
+    __tablename__ = "correlation_groups"
     
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    event_id = Column(String, index=True, nullable=True)
-    source_system = Column(String, nullable=True)
     parent_serial_number = Column(String, index=True, nullable=True)
-    child_serial_number = Column(String, nullable=True)
-    entity_type = Column(String, nullable=True)
-    step = Column(String, nullable=True)
-    result = Column(String, nullable=True)
-    correlation_status = Column(String, index=True, nullable=True)
-    payload = Column(String, nullable=True)
+    status = Column(String, index=True, default="IN_PROGRESS")
+    expected_children_count = Column(Integer, nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
+
+class CorrelationItem(Base):
+    __tablename__ = "correlation_items"
+    
+    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    group_id = Column(String, index=True, nullable=True) # logically FK to correlation_groups.id
+    serial_number = Column(String, index=True, nullable=True)
+    parent_serial_number = Column(String, index=True, nullable=True)
+    assembly_level = Column(String, nullable=True)
+    process_step = Column(String, nullable=True)
+    result_type = Column(String, nullable=True)
+    validation_status = Column(String, nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 class SchemaVersion(Base):
@@ -167,6 +175,19 @@ class ProcessingAttempt(Base):
     error_message = Column(String, nullable=True)
     flags_response_code = Column(Integer, nullable=True)
     flags_response_body = Column(String, nullable=True)
+
+class ExceptionEvent(Base):
+    __tablename__ = "exception_events"
+    
+    id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
+    event_id = Column(String, index=True)
+    exception_type = Column(String, nullable=True)
+    exception_reason = Column(String, nullable=True)
+    raw_payload = Column(String, nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    resolved = Column(Boolean, default=False)
+    resolved_by = Column(String, nullable=True)
+    resolved_at = Column(DateTime, nullable=True)
 
 Base.metadata.create_all(bind=engine)
 
