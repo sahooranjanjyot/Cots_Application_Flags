@@ -49,9 +49,26 @@ def process_message(ch, method, properties, body):
             
             if response.status_code >= 400 and response.status_code < 500:
                 logger.error(f"Event {event_id} permanently failed with 4xx: {response.text}")
-                # We do not retry 4xx errors
+                from database import SessionLocal, QualityEvent, ExceptionEvent
+                db = SessionLocal()
+                try:
+                    event = db.query(QualityEvent).filter(QualityEvent.event_id == event_id).first()
+                    if event:
+                        event.transmission_status = "FAILED"
+                    
+                    exc = ExceptionEvent(
+                        event_id=event_id,
+                        exception_type="FLAGS_HTTP_4XX",
+                        exception_reason=response.text[:250],
+                        raw_payload=json.dumps(payload)
+                    )
+                    db.add(exc)
+                    db.commit()
+                except Exception as dbe:
+                    logger.error(f"DB Update failed on 4xx: {dbe}")
+                finally:
+                    db.close()
                 ch.basic_ack(delivery_tag=method.delivery_tag)
-                # Here we could record to DB via API or direct
                 return
             
             logger.info(f"Event {event_id} successfully sent to FLAGS")
