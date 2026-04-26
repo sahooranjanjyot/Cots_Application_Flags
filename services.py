@@ -121,6 +121,57 @@ def handle_correlation(mes_data_dict, rules_config):
     finally:
         db.close()
 
+def get_traceability(serial_number: str):
+    db = SessionLocal()
+    try:
+        # Try as parent
+        group = db.query(CorrelationGroup)\
+            .filter(CorrelationGroup.parent_serial_number == serial_number)\
+            .first()
+
+        if group:
+            result = {
+                "parent_serial": group.parent_serial_number,
+                "status": group.status,
+                "children": []
+            }
+
+            for item in group.items:
+                result["children"].append({
+                    "serial": item.serial_number,
+                    "level": item.assembly_level,
+                    "step": item.process_step,
+                    "result": item.result_type
+                })
+            return result
+
+        # Try as child
+        item = db.query(CorrelationItem)\
+            .filter(CorrelationItem.serial_number == serial_number)\
+            .first()
+
+        if item:
+            parent_group = db.query(CorrelationGroup)\
+                .filter(CorrelationGroup.id == item.group_id)\
+                .first()
+
+            result = {
+                "child_serial": serial_number,
+                "parent_serial": parent_group.parent_serial_number,
+                "siblings": []
+            }
+
+            for sibling in parent_group.items:
+                result["siblings"].append({
+                    "serial": sibling.serial_number,
+                    "result": sibling.result_type
+                })
+            return result
+
+        return {"message": "No traceability found"}
+    finally:
+        db.close()
+
 def log_to_db(mes_data_dict, transmission_status, validation_status, error_msg):
     payload_str = json.dumps(mes_data_dict)
     try:

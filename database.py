@@ -1,5 +1,5 @@
-from sqlalchemy import create_engine, Column, String, DateTime, Integer, Boolean, Text
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy import create_engine, Column, String, DateTime, Integer, Boolean, Text, ForeignKey
+from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from datetime import datetime, timezone
 import uuid
 
@@ -82,11 +82,13 @@ class CorrelationGroup(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
 
+    items = relationship("CorrelationItem", back_populates="group")
+
 class CorrelationItem(Base):
     __tablename__ = "correlation_items"
     
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
-    group_id = Column(String, index=True, nullable=True) # logically FK to correlation_groups.id
+    group_id = Column(String, ForeignKey("correlation_groups.id"), index=True, nullable=True)
     serial_number = Column(String, index=True, nullable=True)
     parent_serial_number = Column(String, index=True, nullable=True)
     assembly_level = Column(String, nullable=True)
@@ -94,6 +96,8 @@ class CorrelationItem(Base):
     result_type = Column(String, nullable=True)
     validation_status = Column(String, nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    group = relationship("CorrelationGroup", back_populates="items")
 
 class SchemaVersion(Base):
     __tablename__ = "schema_versions"
